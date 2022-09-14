@@ -64,19 +64,22 @@ $route['translate_uri_dashes'] = TRUE;
 /*FUNGSIONAL KARYAWAN (STAFF PD) */
 
 //CRUD PANITIA
-$route['api/Karyawan/Panitia'] = 'api/Karyawan/PanitiaControllerGet/index';
-$route['api/Karyawan/Find/(:any)'] = 'api/Karyawan/PanitiaControllerFind/fiPanitia/$1';
-$route['api/Karyawan/Insert'] = 'api/Karyawan/PanitiaControllerAdd/addPanitia';
-$route['api/Karyawan/Update/(:any)'] = 'api/Karyawan/PanitiaControllerUpdate/updatePanitia/$1';
-$route['api/Karyawan/Delete/(:any)'] = 'api/Karyawan/PanitiaControllerDel/deletePanitia/$1';
-
-
+$route['api/karyawan/panitia'] = 'api/Karyawan/PanitiaControllerGet/index';
+$route['api/karyawan/find/(:any)'] = 'api/Karyawan/PanitiaControllerFind/fiPanitia/$1';
+$route['api/karyawan/insert'] = 'api/Karyawan/PanitiaControllerAdd/addPanitia';
+$route['api/karyawan/update/(:any)'] = 'api/Karyawan/PanitiaControllerUpdate/updatePanitia/$1';
+$route['api/karyawan/delete/(:any)'] = 'api/Karyawan/PanitiaControllerDel/deletePanitia/$1';
 //CRUD SK
+
 
 /* FUNGSIONAL PANITIA */
 
 //CRUD DATA PESERTA
-
+$route['api/panitia/peserta'] = 'api/Panitia/PesertaControllerGet/index';
+// $route['api/panitia/find/(:any)'] = 'api/Panitia//$1';
+// $route['api/panitia/insert'] = 'api/Panitia/';
+// $route['api/panitia/update/(:any)'] = 'api/Panitia//$1';
+// $route['api/panitia/delete/(:any)'] = 'api/Panitia//$1';
 
 //CRUD ASISTEN
 
@@ -96,13 +99,22 @@ $route['api/Karyawan/Delete/(:any)'] = 'api/Karyawan/PanitiaControllerDel/delete
 /* FUNGSIONAL ADMIN PD */
 
 //CRUD DIKLAT
-
+$route['api/adminpd/diklat'] = 'api/AdminPD/DiklatControllerGet/index';
+$route['api/adminpd/find/(:any)'] = 'api/AdminPD/DiklatControllerFind/fiDiklat/$1';
+// $route['api/adminpd/insert'] = 'api/AdminPD/DiklatControllerAdd/AddDiklat';
+// $route['api/adminpd/update/(:any)'] = 'api/Panitia//$1';
+// $route['api/adminpd/delete/(:any)'] = 'api/Panitia//$1';
 
 //CRUD PENGAJAR
 
 
 //CRUD JADWAL
 
-/* FUNGSIONAL Peserta */
+
+
+/* FUNGSIONAL PESERTA */
 
 //CRUD DATA PRIBADI
+
+
+//CRUD KARYAWAN

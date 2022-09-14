@@ -4,15 +4,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class PanitiaModel extends CI_Model
 {
-    public function get_panitia()
+
+    public function get_partial_panitia()
     {
+        $this->db->select('committee_id,committee_front_degree,committee_name,committee_back_degree');
         $query = $this->db->get('tb_committee');
-        return $query->result();
+        return $query->result_array();
     }
+
 
     public function editPanitia($id)
     {
-        $this->db->where('committee_id', $id);
+        $this->db->select('committee_id,committee_front_degree,committee_name,committee_back_degree')->where('committee_id', $id);
         $query = $this->db->get('tb_committee');
         return $query->row();
     }
@@ -35,3 +38,12 @@ class PanitiaModel extends CI_Model
         return $this->db->affected_rows();
     }
 }
+
+
+
+
+    // public function get_panitia()
+    // {
+    //     $query = $this->db->get('tb_committee');
+    //     return $query->result_array();
+    // }

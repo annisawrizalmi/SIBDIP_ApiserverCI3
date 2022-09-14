@@ -7,20 +7,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-class PanitiaControllerFind extends REST_Controller
+class DiklatControllerFind extends REST_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('PanitiaModel');
+        $this->load->model('DiklatModel');
     }
 
 
-    //mendapatkan id
-    public function fiPanitia_get($id)
+    //mendapatkan data
+    public function fiDiklat_get($id)
     {
-        $panitia = new PanitiaModel;
-        $result = $panitia->editPanitia($id);
+        $diklat = new DiklatModel;
+        $result = $diklat->editDiklat($id);
         if ($result) {
             $this->response([
                 'message' => 'Id Avalaible',
