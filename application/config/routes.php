@@ -101,9 +101,9 @@ $route['api/panitia/peserta'] = 'api/Panitia/PesertaControllerGet/index';
 //CRUD DIKLAT
 $route['api/adminpd/diklat'] = 'api/AdminPD/DiklatControllerGet/index';
 $route['api/adminpd/find/(:any)'] = 'api/AdminPD/DiklatControllerFind/fiDiklat/$1';
-// $route['api/adminpd/insert'] = 'api/AdminPD/DiklatControllerAdd/AddDiklat';
-// $route['api/adminpd/update/(:any)'] = 'api/Panitia//$1';
-// $route['api/adminpd/delete/(:any)'] = 'api/Panitia//$1';
+$route['api/adminpd/insert'] = 'api/AdminPD/DiklatControllerAdd/AddDiklat';
+$route['api/adminpd/update/(:any)'] = 'api/AdminPD/DiklatControllerUpdate/updateDiklat/$1';
+$route['api/adminpd/delete/(:any)'] = 'api/Panitia/DiklatControllerDel/deleteDiklat/$1';
 
 //CRUD PENGAJAR
 

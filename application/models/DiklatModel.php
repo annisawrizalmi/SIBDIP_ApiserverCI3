@@ -24,4 +24,16 @@ class DiklatModel extends CI_Model
         $this->db->insert('tb_assessment', $data);
         return $this->db->affected_rows();
     }
+
+    public function update_diklat($id, $data)
+    {
+        $this->db->update('tb_assessment', $data, ['assessment_id' => $id]);
+        return $this->db->affected_rows();
+    }
+
+    public function delete_diklat($id)
+    {
+        $this->db->delete('tb_assessment', ['assessment_id' => $id]);
+        return $this->db->affected_rows();
+    }
 }

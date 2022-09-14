@@ -7,32 +7,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-class PanitiaControllerDel extends REST_Controller
+class DiklatControllerDel extends REST_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('PanitiaModel');
+        $this->load->model('DiklatModel');
     }
 
 
     //menghapus
-    public function deletePanitia_delete($id)
+    public function deleteDiklat_delete($id)
     {
 
-        $panitia = new PanitiaModel;
+        $diklat = new DiklatModel;
 
-        $result = $panitia->delete_Panitia($id);
+        $result = $diklat->delete_diklat($id);
 
         if ($result > 0) {
             $this->response([
                 'status' => true,
-                'message' => 'Panitia DELETED'
+                'message' => 'assessment DELETED'
             ], REST_Controller::HTTP_OK);
         } else {
             $this->response([
                 'status' => false,
-                'message' => 'ID Not Found Panitia'
+                'message' => 'ID Not Found assessment'
             ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
