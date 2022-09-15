@@ -1,0 +1,39 @@
+<?php
+
+use Restserver\Libraries\REST_Controller;
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+require APPPATH . 'libraries/REST_Controller.php';
+require APPPATH . 'libraries/Format.php';
+
+class PesertaControllerDel extends REST_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('PesertaModel');
+    }
+
+
+    //menghapus
+    public function deletePeserta_delete($id)
+    {
+
+        $peserta = new PesertaModel;
+
+        $result = $peserta->delete_Peserta($id);
+
+        if ($result > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'student DELETED'
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'ID Not Found student'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
+}
