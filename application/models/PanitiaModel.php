@@ -12,7 +12,6 @@ class PanitiaModel extends CI_Model
         return $query->result_array();
     }
 
-
     public function editPanitia($id)
     {
         $this->db->select('committee_id,committee_front_degree,committee_name,committee_back_degree')->where('committee_id', $id);

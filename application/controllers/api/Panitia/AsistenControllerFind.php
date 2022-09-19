@@ -14,4 +14,23 @@ class AsistenControllerFind extends REST_Controller
         parent::__construct();
         $this->load->model('AsistenModel');
     }
+
+    public function fiAsisten_get($id)
+    {
+        $asisten = new AsistenModel;
+        $result = $asisten->editAsisten($id);
+
+
+        if ($result) {
+            $this->response([
+                'message' => 'Id Avalaible',
+                'data' => $result
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'Id Not Found'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

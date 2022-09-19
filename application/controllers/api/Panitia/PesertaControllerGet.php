@@ -15,12 +15,11 @@ class PesertaControllerGet extends REST_Controller
         $this->load->model('PesertaModel');
     }
 
-
     //mendapatkan data
     public function index_get()
     {
-        $panitia = new PesertaModel;
-        $result_pes = $panitia->get_partial_peserta();
+        $peserta = new PesertaModel;
+        $result_pes = $peserta->get_partial_peserta();
 
         if ($result_pes) {
             $this->response([

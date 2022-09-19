@@ -14,12 +14,13 @@ class PegawaiControllerAdd extends REST_Controller
         parent::__construct();
         $this->load->model('PegawaiModel');
     }
-}
 
+    //menambahkan data
+    public function addPegawai_post()
+    {
+        $pegawai = new PegawaiModel;
 
-
-
-/* 
+        $data = [
             'pegawai_id'                => $this->post('pegawai_id'),
             'uid'                       => $this->post('uid'),
             'sort_id'                   => $this->post('sort_id'),
@@ -95,6 +96,29 @@ class PegawaiControllerAdd extends REST_Controller
             'end_token'                 => $this->post('end_token'),
             'date_added_employee'       => $this->post('date_added_employee'),
             'date_updated_employee'     => $this->post('date_updated_employee')
+        ];
+
+        $result = $pegawai->insertPegawai($data);
+
+        if ($result > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'NEW Pegawai Created'
+            ], REST_Controller::HTTP_CREATED);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'FAILDE TO CREATE Pegawai'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
+}
+
+
+
+
+/* 
+            
 
 
 */

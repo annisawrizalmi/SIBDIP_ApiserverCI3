@@ -14,4 +14,25 @@ class PegawaiControllerDel extends REST_Controller
         parent::__construct();
         $this->load->model('PegawaiModel');
     }
+
+    //menghapus
+    public function deletePegawai_delete($id)
+    {
+
+        $pegawai = new PegawaiModel;
+
+        $result = $pegawai->delete_Pegawai($id);
+
+        if ($result > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'Pegawai DELETED'
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'ID Not Found Pegawai'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

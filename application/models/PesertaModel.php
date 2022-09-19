@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class PesertaModel extends CI_Model
 {
 
+
     public function get_partial_peserta()
     {
         $this->db->select('fullname, gender, address, department');
