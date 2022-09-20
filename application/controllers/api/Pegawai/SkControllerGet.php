@@ -14,4 +14,23 @@ class SkControllerGet extends REST_Controller
         parent::__construct();
         $this->load->model('SkModel');
     }
+
+    //mendapatkan data
+    public function index_get()
+    {
+        $sk = new SkModel;
+        $result_sk = $sk->get_partial_Sk();
+
+        if ($result_sk) {
+            $this->response([
+                'message' => 'Data Obtained',
+                'data' => $result_sk
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'message' => 'Data Not Found',
+                'data' => NULL
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

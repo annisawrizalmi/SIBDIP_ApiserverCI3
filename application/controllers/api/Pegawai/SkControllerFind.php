@@ -14,4 +14,22 @@ class SkControllerFind extends REST_Controller
         parent::__construct();
         $this->load->model('SkModel');
     }
+
+    //mendapatkan id
+    public function fiSk_get($id)
+    {
+        $sk = new SkModel;
+        $result = $sk->editSk($id);
+        if ($result) {
+            $this->response([
+                'message' => 'Id Avalaible',
+                'data' => $result
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'Id Not Found'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

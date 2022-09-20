@@ -14,4 +14,36 @@ class SkControllerAdd extends REST_Controller
         parent::__construct();
         $this->load->model('SkModel');
     }
+
+    //menambahkan data
+    public function addSk_post()
+    {
+        $sk = new SkModel;
+
+        $data = [
+            'assessment_no_sk_penyelenggara'           => $this->post('assessment_no_sk_penyelenggara'),
+            'assessment_no_sk_peserta'                 => $this->post('assessment_no_sk_peserta'),
+            'assessment_no_sk_asesor'                  => $this->post('assessment_no_sk_asesor'),
+            'assessment_no_sk_evaluasi'                => $this->post('assessment_no_sk_evaluasi'),
+            'assessment_tgl_sk_evaluasi'               => $this->post('assessment_tgl_sk_evaluasi'),
+            'assessment_no_sk_uk'                      => $this->post('assessment_no_sk_uk'),
+            'assessment_tgl_sk_uk'                     => $this->post('assessment_tgl_sk_uk'),
+            'assessment_no_sk_hasil_uk'                => $this->post('assessment_no_sk_hasil_uk'),
+            'assessment_tgl_sk_hasil_uk'               => $this->post('assessment_tgl_sk_hasil_uk'),
+        ];
+
+        $result = $sk->insertSk($data);
+
+        if ($result > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'NEW Surat Keputusan Created'
+            ], REST_Controller::HTTP_CREATED);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'FAILDE TO CREATE Surat Keputusan'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

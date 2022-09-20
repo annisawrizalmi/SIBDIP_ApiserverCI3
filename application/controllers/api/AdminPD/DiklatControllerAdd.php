@@ -177,12 +177,12 @@ class DiklatControllerAdd extends REST_Controller
         if ($result > 0) {
             $this->response([
                 'status' => true,
-                'message' => 'NEW Assemeent assessment Created'
+                'message' => 'NEW Diklat Created'
             ], REST_Controller::HTTP_CREATED);
         } else {
             $this->response([
                 'status' => false,
-                'message' => 'FAILDE TO CREATE assessment'
+                'message' => 'FAILDE TO CREATE Diklat'
             ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
