@@ -31,6 +31,7 @@ class PanitiaModel extends CI_Model
         return $this->db->affected_rows();
     }
 
+
     public function delete_Panitia($id)
     {
         $this->db->delete('tb_committee', ['committee_id' => $id]);

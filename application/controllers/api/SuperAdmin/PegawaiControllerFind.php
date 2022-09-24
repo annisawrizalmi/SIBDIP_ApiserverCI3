@@ -15,6 +15,7 @@ class PegawaiControllerFind extends REST_Controller
         $this->load->model('PegawaiModel');
     }
 
+
     //mendapatkan id
     public function fiPegawai_get($id)
     {

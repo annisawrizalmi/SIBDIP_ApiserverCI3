@@ -7,31 +7,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-class PanitiaControllerDel extends REST_Controller
+class JadwalControllerGet extends REST_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('PanitiaModel');
+        $this->load->model('JwlModel');
     }
 
-
-    //menghapus
-    public function deletePanitia_delete($id)
+    public function index_get()
     {
-        $panitia = new PanitiaModel;
+        $Jwl = new JwlModel;
+        $result_jwl = $Jwl->get_partial_Jwl();
 
-        $result = $panitia->delete_Panitia($id);
-
-        if ($result > 0) {
+        if ($result_jwl) {
             $this->response([
-                'status' => true,
-                'message' => 'Panitia DELETED'
+                'message' => 'Data Obtained',
+                'data' => $result_jwl
             ], REST_Controller::HTTP_OK);
         } else {
             $this->response([
-                'status' => false,
-                'message' => 'ID Not Found Panitia'
+                'message' => 'Data Not Found',
+                'data' => NULL
             ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }

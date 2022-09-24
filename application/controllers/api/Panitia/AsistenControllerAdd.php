@@ -17,7 +17,7 @@ class AsistenControllerAdd extends REST_Controller
 
 
     //menambahkan data
-    public function addAsisten_post()
+    public function AddAsisten_post()
     {
         $asisten = new AsistenModel;
 
