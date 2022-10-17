@@ -36,6 +36,18 @@ class AsistenModel extends CI_Model
         $this->db->delete('tb_assistant', ['assistant_id' => $id]);
         return $this->db->affected_rows();
     }
+
+    public function idterurut($total)
+    {
+        if ($total == 0) {
+            return 1;
+        } else {
+
+            $count = $this->db->select_max('assistant_id')->get('tb_assistant')->row()->assistant_id;
+            $count += 1;
+            return $count;
+        }
+    }
 }
 
 

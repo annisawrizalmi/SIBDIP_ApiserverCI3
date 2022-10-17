@@ -36,4 +36,16 @@ class JwlModel extends CI_Model
         $this->db->delete('tb_material', ['material_id' => $id]);
         return $this->db->affected_rows();
     }
+
+    public function idterurut($total)
+    {
+        if ($total == 0) {
+            return 1;
+        } else {
+
+            $count = $this->db->select_max('material_id')->get('tb_material')->row()->material_id;
+            $count += 1;
+            return $count;
+        }
+    }
 }

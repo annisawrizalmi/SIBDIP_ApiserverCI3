@@ -64,45 +64,45 @@ $route['translate_uri_dashes'] = TRUE;
 /*FUNGSIONAL PEGAWAI (STAFF PD) */
 
 //CRUD PANITIA (OKE)
-$route['api/pegawai/panitia'] = 'api/Pegawai/PanitiaControllerGet/index';
-$route['api/pegawai/find/panitia/(:any)'] = 'api/Pegawai/PanitiaControllerFind/fiPanitia/$1';
-$route['api/pegawai/insert/panitia'] = 'api/Pegawai/PanitiaControllerAdd/addPanitia';
-$route['api/pegawai/update/panitia/(:any)'] = 'api/Pegawai/PanitiaControllerUpdate/updatePanitia/$1';
-$route['api/pegawai/delete/panitia/(:any)'] = 'api/Pegawai/PanitiaControllerDel/deletePanitia/$1';
+$route['api/pegawai/panitia']['GET']                            = 'api/Pegawai/PanitiaControllerGet/index';
+$route['api/pegawai/find/panitia/(:any)']['GET']                = 'api/Pegawai/PanitiaControllerFind/fiPanitia/$1';
+$route['api/pegawai/insert/panitia']['POST']                    = 'api/Pegawai/PanitiaControllerAdd/addPanitia';
+$route['api/pegawai/update/panitia/(:any)']['PUT']              = 'api/Pegawai/PanitiaControllerUpdate/updatePanitia/$1';
+$route['api/pegawai/delete/panitia/(:any)']['DELETE']           = 'api/Pegawai/PanitiaControllerDel/deletePanitia/$1';
 
 
-//CRUD SK
-$route['api/pegawai/sk'] = 'api/Pegawai/SkControllerGet/index';
-$route['api/pegawai/find/sk/(:any)'] = 'api/Pegawai/SkControllerFind/fiSk/$1';
-$route['api/pegawai/insert/sk'] = 'api/Pegawai/SkControllerAdd/addSk';                  //masih belum berfungsi
-$route['api/pegawai/update/sk/(:any)'] = 'api/Pegawai/SkControllerUpdate/updateSk/$1'; //masih belum berfungsi
-$route['api/pegawai/delete/sk/(:any)'] = 'api/Pegawai/SkControllerDel/deleteSk/$1';     //masih belum berfungsi
+//CRUD SK (belum Ok)
+$route['api/pegawai/sk']['GET']                                 = 'api/Pegawai/SkControllerGet/index';
+$route['api/pegawai/find/sk/(:any)']['GET']                     = 'api/Pegawai/SkControllerFind/fiSk/$1';
+$route['api/pegawai/insert/sk']['POST']                         = 'api/Pegawai/SkControllerAdd/addSk';                  //masih belum berfungsi
+$route['api/pegawai/update/sk/(:any)']['PUT']                   = 'api/Pegawai/SkControllerUpdate/updateSk/$1'; //masih belum berfungsi
+$route['api/pegawai/delete/sk/(:any)']['DELETE']                = 'api/Pegawai/SkControllerDel/deleteSk/$1';     //masih belum berfungsi
 
 
 
 /* FUNGSIONAL PANITIA */
 
 //CRUD PESERTA (OKE)
-$route['api/panitia/peserta'] = 'api/Panitia/PesertaControllerGet/index';
-$route['api/panitia/find/peserta/(:any)'] = 'api/Panitia/PesertaControllerFind/fiPeserta/$1';
-$route['api/panitia/insert/peserta'] = 'api/Panitia/PesertaControllerAdd/addPeserta';
-$route['api/panitia/update/peserta/(:any)'] = 'api/Panitia/PesertaControllerUpdate/updatePeserta/$1';
-$route['api/panitia/delete/peserta/(:any)'] = 'api/Panitia/PesertaControllerDel/deletePeserta/$1';
+$route['api/panitia/peserta']['GET']                            = 'api/Panitia/PesertaControllerGet/index';
+$route['api/panitia/find/peserta/(:any)']['GET']                = 'api/Panitia/PesertaControllerFind/fiPeserta/$1';
+$route['api/panitia/insert/peserta']['POST']                    = 'api/Panitia/PesertaControllerAdd/addPeserta';
+$route['api/panitia/update/peserta/(:any)']['PUT']              = 'api/Panitia/PesertaControllerUpdate/updatePeserta/$1';
+$route['api/panitia/delete/peserta/(:any)']['DELETE']           = 'api/Panitia/PesertaControllerDel/deletePeserta/$1';
 
 
 //CRUD ASISTEN (OKE)
-$route['api/panitia/asisten'] = 'api/Panitia/AsistenControllerGet/index';
-$route['api/panitia/find/asisten/(:any)'] = 'api/Panitia/AsistenControllerFind/fiAsisten/$1';
-$route['api/panitia/insert/asisten'] = 'api/Panitia/AsistenControllerAdd/AddAsisten';
-$route['api/panitia/update/asisten/(:any)'] = 'api/Panitia/AsistenControllerUpdate/updateAsisten/$1';
-$route['api/panitia/delete/asisten/(:any)'] = 'api/Panitia/AsistenControllerDel/deleteAsisten/$1';
+$route['api/panitia/asisten']['GET']                            = 'api/Panitia/AsistenControllerGet/index';
+$route['api/panitia/find/asisten/(:any)']['GET']                = 'api/Panitia/AsistenControllerFind/fiAsisten/$1';
+$route['api/panitia/insert/asisten']['POST']                    = 'api/Panitia/AsistenControllerAdd/AddAsisten';
+$route['api/panitia/update/asisten/(:any)']['PUT']              = 'api/Panitia/AsistenControllerUpdate/updateAsisten/$1';
+$route['api/panitia/delete/asisten/(:any)']['DELETE']           = 'api/Panitia/AsistenControllerDel/deleteAsisten/$1';
 
 //CRUD ABSEN PESERTA
-// $route['api/panitia/absenpeserta'] = 'api/Panitia/AbsenPesertaControllerGet/index';
-// $route['api/panitia/find/absenpeserta/(:any)'] = 'api/Panitia/AbsenPesertaControllerFind/fiAsenta/$1';
-// $route['api/panitia/insert/absenpeserta'] = 'api/Panitia/AbsenPesertaControllerAdd/AddAsenta';
-// $route['api/panitia/update/absenpeserta/(:any)'] = 'api/Panitia/AbsenPesertaControllerUpdate/updateAsenta/$1';
-// $route['api/panitia/delete/absenpeserta/(:any)'] = 'api/Panitia/AbsenPesertaControllerDel/deleteAsenta/$1';
+// $route['api/panitia/absenpeserta']['GET']                    = 'api/Panitia/AbsenPesertaControllerGet/index';
+// $route['api/panitia/find/absenpeserta/(:any)']['GET']        = 'api/Panitia/AbsenPesertaControllerFind/fiAsenta/$1';
+// $route['api/panitia/insert/absenpeserta']['POST']            = 'api/Panitia/AbsenPesertaControllerAdd/AddAsenta';
+// $route['api/panitia/update/absenpeserta/(:any)']['PUT']      = 'api/Panitia/AbsenPesertaControllerUpdate/updateAsenta/$1';
+// $route['api/panitia/delete/absenpeserta/(:any)']['DELETE']   = 'api/Panitia/AbsenPesertaControllerDel/deleteAsenta/$1';
 
 
 /* FUNGSIONAL PENGAJAR */
@@ -111,36 +111,36 @@ $route['api/panitia/delete/asisten/(:any)'] = 'api/Panitia/AsistenControllerDel/
 // MASIH BELUM DIBUAT
 
 //CRUD NILAI PESERTA
-// $route['api/pengajar/nilai_peserta'] = 'api/Pengajar/NilaiPesertaControllerGet/index';
-// $route['api/pengajar/find/nilai_peserta/(:any)'] = 'api/Pengajar/NilaiPesertaControllerFind/fiNilaiPeserta/$1';
-// $route['api/pengajar/insert/nilai_peserta'] = 'api/Pengajar/NilaiPesertaControllerAdd/AddNilaiPeserta';
-// $route['api/pengajar/update/nilai_peserta/(:any)'] = 'api/Pengajar/NilaiPesertaControllerUpdate/UpdateNilaiPeserta/$1';
-// $route['api/pengajar/delete/nilai_peserta/(:any)'] = 'api/Pengajar/NilaiPesertaControllerDel/deleteNilaiPeserta/$1';
+// $route['api/pengajar/nilai_peserta']['GET']                  = 'api/Pengajar/NilaiPesertaControllerGet/index';
+// $route['api/pengajar/find/nilai_peserta/(:any)']['GET']      = 'api/Pengajar/NilaiPesertaControllerFind/fiNilaiPeserta/$1';
+// $route['api/pengajar/insert/nilai_peserta']['POST']          = 'api/Pengajar/NilaiPesertaControllerAdd/AddNilaiPeserta';
+// $route['api/pengajar/update/nilai_peserta/(:any)']['PUT']    = 'api/Pengajar/NilaiPesertaControllerUpdate/UpdateNilaiPeserta/$1';
+// $route['api/pengajar/delete/nilai_peserta/(:any)']['DELETE'] = 'api/Pengajar/NilaiPesertaControllerDel/deleteNilaiPeserta/$1';
 
 
 
 /* FUNGSIONAL ADMIN PD */
 
 //CRUD DIKLAT (OKE)
-$route['api/adminpd/diklat'] = 'api/AdminPD/DiklatControllerGet/index';
-$route['api/adminpd/find/diklat/(:any)'] = 'api/AdminPD/DiklatControllerFind/fiDiklat/$1';
-$route['api/adminpd/insert/diklat'] = 'api/AdminPD/DiklatControllerAdd/AddDiklat';
-$route['api/adminpd/update/diklat/(:any)'] = 'api/AdminPD/DiklatControllerUpdate/updateDiklat/$1';
-$route['api/adminpd/delete/diklat/(:any)'] = 'api/AdminPd/DiklatControllerDel/deleteDiklat/$1';
+$route['api/adminpd/diklat']['GET']                             = 'api/AdminPD/DiklatControllerGet/index';
+$route['api/adminpd/find/diklat/(:any)']['GET']                 = 'api/AdminPD/DiklatControllerFind/fiDiklat/$1';
+$route['api/adminpd/insert/diklat']['POST']                     = 'api/AdminPD/DiklatControllerAdd/AddDiklat';
+$route['api/adminpd/update/diklat/(:any)']['PUT']               = 'api/AdminPD/DiklatControllerUpdate/updateDiklat/$1';
+$route['api/adminpd/delete/diklat/(:any)']['DELETE']            = 'api/AdminPd/DiklatControllerDel/deleteDiklat/$1';
 
 //CRUD PENGAJAR (OKE)
-$route['api/adminpd/pengajar'] = 'api/AdminPD/PengajarControllerGet/index';
-$route['api/adminpd/find/pengajar/(:any)'] = 'api/AdminPD/PengajarControllerFind/fiPengajar/$1';
-$route['api/adminpd/insert/pengajar'] = 'api/AdminPD/PengajarControllerAdd/AddPengajar';
-$route['api/adminpd/update/pengajar/(:any)'] = 'api/AdminPD/PengajarControllerUpdate/updatePengajar/$1';
-$route['api/adminpd/delete/pengajar/(:any)'] = 'api/AdminPD/PengajarControllerDel/deletePengajar/$1';
+$route['api/adminpd/pengajar']['GET']                           = 'api/AdminPD/PengajarControllerGet/index';
+$route['api/adminpd/find/pengajar/(:any)']['GET']               = 'api/AdminPD/PengajarControllerFind/fiPengajar/$1';
+$route['api/adminpd/insert/pengajar']['POST']                   = 'api/AdminPD/PengajarControllerAdd/AddPengajar';
+$route['api/adminpd/update/pengajar/(:any)']['PUT']             = 'api/AdminPD/PengajarControllerUpdate/updatePengajar/$1';
+$route['api/adminpd/delete/pengajar/(:any)']['DELETE']          = 'api/AdminPD/PengajarControllerDel/deletePengajar/$1';
 
 //CRUD JADWAL (OKE)
-$route['api/adminpd/jadwal'] = 'api/AdminPD/JadwalControllerGet/index';
-$route['api/adminpd/find/jadwal/(:any)'] = 'api/AdminPD/JadwalControllerFind/fiJadwal/$1';
-$route['api/adminpd/insert/jadwal'] = 'api/AdminPD/JadwalControllerAdd/AddJadwal/$1';
-$route['api/adminpd/update/jadwal/(:any)'] = 'api/AdminPD/JadwalControllerUpdate/updateJadwal/$1';
-$route['api/adminpd/delete/jadwal/(:any)'] = 'api/AdminPD/JadwalControllerDel/deleteJadwal/$1';
+$route['api/adminpd/jadwal']['GET']                             = 'api/AdminPD/JadwalControllerGet/index';
+$route['api/adminpd/find/jadwal/(:any)']['GET']                 = 'api/AdminPD/JadwalControllerFind/fiJadwal/$1';
+$route['api/adminpd/insert/jadwal']['POST']                     = 'api/AdminPD/JadwalControllerAdd/AddJadwal/$1';
+$route['api/adminpd/update/jadwal/(:any)']['PUT']               = 'api/AdminPD/JadwalControllerUpdate/updateJadwal/$1';
+$route['api/adminpd/delete/jadwal/(:any)']['DELETE']            = 'api/AdminPD/JadwalControllerDel/deleteJadwal/$1';
 
 
 
@@ -149,8 +149,8 @@ $route['api/adminpd/delete/jadwal/(:any)'] = 'api/AdminPD/JadwalControllerDel/de
 
 /* SUPER ADMIN */
 //CRUD PEGAWAI (OKE)
-$route['api/superadmin/pegawai'] = 'api/SuperAdmin/PegawaiControllerGet/index';
-$route['api/superadmin/find/pegawai/(:any)'] = 'api/SuperAdmin/PegawaiControllerFind/fiPegawai/$1';
-$route['api/superadmin/insert/pegawai'] = 'api/SuperAdmin/PegawaiControllerAdd/AddPegawai';
-$route['api/superadmin/update/pegawai/(:any)'] = 'api/SuperAdmin/PegawaiControllerUpdate/updatePegawai/$1';
-$route['api/superadmin/delete/pegawai/(:any)'] = 'api/SuperAdmin/PegawaiControllerDel/deletePegawai/$1';
+$route['api/superadmin/pegawai']['GET']                         = 'api/SuperAdmin/PegawaiControllerGet/index';
+$route['api/superadmin/find/pegawai/(:any)']['GET']             = 'api/SuperAdmin/PegawaiControllerFind/fiPegawai/$1';
+$route['api/superadmin/insert/pegawai']['POST']                 = 'api/SuperAdmin/PegawaiControllerAdd/AddPegawai';
+$route['api/superadmin/update/pegawai/(:any)']['PUT']           = 'api/SuperAdmin/PegawaiControllerUpdate/updatePegawai/$1';
+$route['api/superadmin/delete/pegawai/(:any)']['DELETE']        = 'api/SuperAdmin/PegawaiControllerDel/deletePegawai/$1';

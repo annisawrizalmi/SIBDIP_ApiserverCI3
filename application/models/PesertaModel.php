@@ -37,4 +37,17 @@ class PesertaModel extends CI_Model
         $this->db->delete('tb_student', ['student_id' => $id]);
         return $this->db->affected_rows();
     }
+
+    //mengurutkan id
+    public function idterurut($total)
+    {
+        if ($total == 0) {
+            return 1;
+        } else {
+
+            $count = $this->db->select_max('student_id')->get('tb_student')->row()->student_id;
+            $count += 1;
+            return $count;
+        }
+    }
 }

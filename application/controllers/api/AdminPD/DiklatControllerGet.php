@@ -15,7 +15,6 @@ class DiklatControllerGet extends REST_Controller
         $this->load->model('DiklatModel');
     }
 
-
     //mendapatkan data
     public function index_get()
     {

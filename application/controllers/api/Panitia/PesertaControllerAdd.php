@@ -21,8 +21,10 @@ class PesertaControllerAdd extends REST_Controller
     {
         $peserta = new PesertaModel;
 
+        $i = $this->db->count_all('tb_student');
+
         $data = [
-            'student_id'                            => $this->post('student_id'),
+            'student_id'                            => $peserta->idterurut($i),
             'assessment_id'                         => $this->post('assessment_id'),
             'nik'                                   => $this->post('nik'),
             'fullname'                              => $this->post('fullname'),

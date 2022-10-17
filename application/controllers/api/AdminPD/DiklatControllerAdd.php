@@ -21,9 +21,13 @@ class DiklatControllerAdd extends REST_Controller
     {
         $diklat = new DiklatModel;
 
+        $i = $this->db->count_all('tb_assessment');
+
         $data = [
-            'assessment_id'                         => $this->post('assessment_id'),
-            'assessment_to'                         => $this->post('assessment_to'),
+            //'assessment_id'                         => $this->post('assessment_id'),
+            'assessment_id'                         => $diklat->idterurut($i),
+            'assessment_to'                         => $diklat->toterurut($i),
+            //'assessment_to'                         => $this->post('assessment_to'),
             'scheme_id'                             => $this->post('scheme_id'),
             'assessment_name'                       => $this->post('assessment_name'),
             'assessment_date_start'                 => $this->post('assessment_date_start'),

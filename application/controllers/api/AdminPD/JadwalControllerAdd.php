@@ -20,8 +20,10 @@ class JadwalControllerAdd extends REST_Controller
     {
         $Jwl = new JwlModel;
 
+        $i = $this->db->count_all('tb_material');
+
         $data = [
-            'material_id'                => $this->post('material_id'),
+            'material_id'                 => $Jwl->idterurut($i),
             'assessment_id'               => $this->post('assessment_id'),
             'material_parent_id'          => $this->post('material_parent_id'),
             'instructor_id'               => $this->post('instructor_id'),

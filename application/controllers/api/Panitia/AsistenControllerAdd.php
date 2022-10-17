@@ -21,8 +21,10 @@ class AsistenControllerAdd extends REST_Controller
     {
         $asisten = new AsistenModel;
 
+        $i = $this->db->count_all('tb_assistant');
+
         $data = [
-            'assistant_id'                      => $this->post('assistant_id'),
+            'assistant_id'                      => $asisten->idterurut($i),
             'assistant_nik'                     => $this->post('assistant_nik'),
             'assistant_nip'                     => $this->post('assistant_nip'),
             'assistant_front_degree'            => $this->post('assistant_front_degree'),
