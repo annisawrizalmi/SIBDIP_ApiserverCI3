@@ -155,8 +155,7 @@ class DiklatControllerUpdate extends REST_Controller
             'shipping_method'                       => $this->put('shipping_method'),
             'shipping_service'                      => $this->put('shipping_service'),
             'shipping_awb'                          => $this->put('shipping_awb'),
-            'assessment_date_added'                 => $this->put('assessment_date_added'),
-            'assessment_date_updated'               => $this->put('assessment_date_updated'),
+            'assessment_date_updated'               => date('Y-m-d H:i:s', time()), //diubah
             'accepted'                              => $this->put('accepted'),
             'token'                                 => $this->put('token'),
             'photo_open'                            => $this->put('photo_open'),

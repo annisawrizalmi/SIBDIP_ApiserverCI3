@@ -1,5 +1,7 @@
 <?php
 
+//tidak dipakai
+
 use Restserver\Libraries\REST_Controller;
 
 defined('BASEPATH') or exit('No direct script access allowed');
@@ -20,7 +22,10 @@ class SkControllerAdd extends REST_Controller
     {
         $sk = new SkModel;
 
+        $i = $this->db->count_all('tb_assessment');
+
         $data = [
+            'assessment_id'                            => $sk->idterurut($i),
             'assessment_no_sk_penyelenggara'           => $this->post('assessment_no_sk_penyelenggara'),
             'assessment_no_sk_peserta'                 => $this->post('assessment_no_sk_peserta'),
             'assessment_no_sk_asesor'                  => $this->post('assessment_no_sk_asesor'),

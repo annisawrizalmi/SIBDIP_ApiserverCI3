@@ -36,4 +36,16 @@ class SkModel extends CI_Model
         $this->db->delete('tb_assessment', ['assessment_id' => $id]);
         return $this->db->affected_rows();
     }
+
+    public function idterurut($total)
+    {
+        if ($total == 0) {
+            return 1;
+        } else {
+
+            $count = $this->db->select_max('assessment_id')->get('tb_assessment')->row()->assessment_id;
+            $count += 1;
+            return $count;
+        }
+    }
 }

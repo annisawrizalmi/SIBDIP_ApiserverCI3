@@ -71,13 +71,12 @@ $route['api/pegawai/update/panitia/(:any)']['PUT']              = 'api/Pegawai/P
 $route['api/pegawai/delete/panitia/(:any)']['DELETE']           = 'api/Pegawai/PanitiaControllerDel/deletePanitia/$1';
 
 
-//CRUD SK (belum Ok)
-$route['api/pegawai/sk']['GET']                                 = 'api/Pegawai/SkControllerGet/index';
-$route['api/pegawai/find/sk/(:any)']['GET']                     = 'api/Pegawai/SkControllerFind/fiSk/$1';
-$route['api/pegawai/insert/sk']['POST']                         = 'api/Pegawai/SkControllerAdd/addSk';                  //masih belum berfungsi
-$route['api/pegawai/update/sk/(:any)']['PUT']                   = 'api/Pegawai/SkControllerUpdate/updateSk/$1'; //masih belum berfungsi
-$route['api/pegawai/delete/sk/(:any)']['DELETE']                = 'api/Pegawai/SkControllerDel/deleteSk/$1';     //masih belum berfungsi
-
+// //CRUD SK (belum Ok)
+// $route['api/pegawai/sk']['GET']                                 = 'api/Pegawai/SkControllerGet/index';
+// $route['api/pegawai/find/sk/(:any)']['GET']                     = 'api/Pegawai/SkControllerFind/fiSk/$1';
+// $route['api/pegawai/insert/sk']['POST']                         = 'api/Pegawai/SkControllerAdd/addSk';                  //masih belum berfungsi
+// $route['api/pegawai/update/sk/(:any)']['PUT']                   = 'api/Pegawai/SkControllerUpdate/updateSk/$1'; //masih belum berfungsi
+// $route['api/pegawai/delete/sk/(:any)']['DELETE']                = 'api/Pegawai/SkControllerDel/deleteSk/$1';     //masih belum berfungsi
 
 
 /* FUNGSIONAL PANITIA */
@@ -118,7 +117,6 @@ $route['api/panitia/delete/asisten/(:any)']['DELETE']           = 'api/Panitia/A
 // $route['api/pengajar/delete/nilai_peserta/(:any)']['DELETE'] = 'api/Pengajar/NilaiPesertaControllerDel/deleteNilaiPeserta/$1';
 
 
-
 /* FUNGSIONAL ADMIN PD */
 
 //CRUD DIKLAT (OKE)
@@ -143,9 +141,13 @@ $route['api/adminpd/update/jadwal/(:any)']['PUT']               = 'api/AdminPD/J
 $route['api/adminpd/delete/jadwal/(:any)']['DELETE']            = 'api/AdminPD/JadwalControllerDel/deleteJadwal/$1';
 
 
-
 /* FUNGSIONAL PESERTA */
 // masih belum dibuat (CRUD data diri)
+// $route['api/superadmin/pegawai']['GET']                         = 'api/SuperAdmin/PegawaiControllerGet/index';
+// $route['api/superadmin/find/pegawai/(:any)']['GET']             = 'api/SuperAdmin/PegawaiControllerFind/fiPegawai/$1';
+// $route['api/superadmin/insert/pegawai']['POST']                 = 'api/SuperAdmin/PegawaiControllerAdd/AddPegawai';
+// $route['api/superadmin/update/pegawai/(:any)']['PUT']           = 'api/SuperAdmin/PegawaiControllerUpdate/updatePegawai/$1';
+// $route['api/superadmin/delete/pegawai/(:any)']['DELETE']        = 'api/SuperAdmin/PegawaiControllerDel/deletePegawai/$1';
 
 /* SUPER ADMIN */
 //CRUD PEGAWAI (OKE)

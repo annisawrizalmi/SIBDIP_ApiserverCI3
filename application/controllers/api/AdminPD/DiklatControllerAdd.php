@@ -23,6 +23,7 @@ class DiklatControllerAdd extends REST_Controller
 
         $i = $this->db->count_all('tb_assessment');
 
+
         $data = [
             //'assessment_id'                         => $this->post('assessment_id'),
             'assessment_id'                         => $diklat->idterurut($i),
@@ -159,8 +160,8 @@ class DiklatControllerAdd extends REST_Controller
             'shipping_method'                       => $this->post('shipping_method'),
             'shipping_service'                      => $this->post('shipping_service'),
             'shipping_awb'                          => $this->post('shipping_awb'),
-            'assessment_date_added'                 => $this->post('assessment_date_added'),
-            'assessment_date_updated'               => $this->post('assessment_date_updated'),
+            'assessment_date_added'                 => date('Y-m-d H:i:s', time()),
+            'assessment_date_updated'               => date('Y-m-d H:i:s', time()),
             'accepted'                              => $this->post('accepted'),
             'token'                                 => $this->post('token'),
             'photo_open'                            => $this->post('photo_open'),
@@ -191,3 +192,5 @@ class DiklatControllerAdd extends REST_Controller
         }
     }
 }
+
+//'assessment_date_added'                 => date('d-M-Y H:i:s'), //untuk menampilkan data di front end
